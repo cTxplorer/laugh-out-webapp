@@ -1,4 +1,4 @@
-# Laught out w/ Chuck Norris
+# 😆😆 Laugh out w/ Chuck Norris 😆😆
 
 An entertaining webapp which feeds it's user with humorous jokes revolving around the legacy of Chuck Norris.
 
