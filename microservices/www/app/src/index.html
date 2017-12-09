@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Laugh Out w/ Chuk Norris</title>
+    <link rel="shortcut icon" href="images/laughing.png" type="image/png">
+    <link href="css/main.css" type="text/css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="script/main.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,800,300|Open+Sans" rel="stylesheet">
+</head>
+
+<body>
+    <header role="banner">
+        <h1>😆😆 Laugh Out w/ Chuck&nbsp;Norris 😆😆</h1>
+    </header>
+
+    <main role="main">
+        <div class="container">
+
+            <div class="jokePanel center">
+                <span id="joke">Shortcuts for PC<br><kbd>SPACE</kbd> / <kbd>ENTER</kbd> &mdash; fetch a joke,<br><kbd>ESC</kbd> &mdash; customize,<br><kbd>ESC</kbd> &mdash; save setting<br></span>
+            </div>
+
+            <div class="editPanel center">
+                <h4>Got a friend like Chuck?</h4>
+
+                <label for="firstName">Your friend's name</label><br>
+                <input type="text" id="firstName" value="Chuck">
+                <input type="text" id="lastName" value="Norris">
+
+                <br><label for="yes">Receive explicit jokes?</label><br>
+                <input type="checkbox" id="yes">
+            </div>
+
+            <div class="btns">
+                <input type="button" value="Customize" id="edit" class="firstClick">
+                <input type="button" value="Joke" id="next">
+            </div>
+
+        </div>
+    </main>
+
+    <footer role="contentinfo">
+        <p id="love">
+            <a data-text="" data-link="https://www.bacillus38.hasura-app.io/" class="whatsapp w3_whatsapp_btn w3_whatsapp_btn_large" id="share" style="margin-bottom: 1em; border-radius: 7px;">Share</a><br> Made with <img src="images/like.png" style="width: 16"> at <i>Hasura Hackathon</i><br><br>
+
+            <a href="mailto:pratik.gadhiya@hotmail.com?subject=Laugh%20out%3A%20Feedback/Bug" id="mail">Report bug / Send Feedback</a>
+
+            <a href="https://www.linkedin.com/in/pratikGadhiya" id="linkedin">Connect with me on <img src="images/linkedin-logo.png" title="linkedin logo"></a>
+        </p>
+    </footer>
+
+    <script>
+        $(document).ready(function() {
+            $(".editPanel").hide();
+            $(this).scrollTop(0);
+            $("#firstName").on("focus", function(e) {
+                $(this).val('');
+            });
+            $("#lastName").on("focus", function(e) {
+                $(this).val('');
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>
