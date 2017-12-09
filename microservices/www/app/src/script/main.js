@@ -58,12 +58,12 @@ $(function () {
         var cnt = 0;
         var prefix = "Loading";
         intrvl = setInterval(function () {
-            i = (++i) % 4;
+            i = ++i;
             if (i == 4) {
                 i = 0;
                 ++cnt;
                 if (cnt == 3)
-                    prefix = "Slow internet detected.<br>Please wait";
+                    prefix = "Check your internet connection. Try refreshing.<br>Please wait";
             }
             $("#joke").html(prefix + Array(i + 1).join("."));
         }, 300);
