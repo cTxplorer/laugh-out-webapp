@@ -1,6 +1,6 @@
 # 😆😆 Laugh out w/ Chuck Norris 😆😆
 
-An entertaining webapp which feeds it's user with humorous jokes revolving around the legacy of Chuck Norris.
+An entertaining webapp which feeds its user with humorous jokes revolving around the legacy of Chuck Norris.
 
 ### Website
 Head to the [webapp](https://www.bacillus38.hasura-app.io/) deployed on Hasura, and have fun!
