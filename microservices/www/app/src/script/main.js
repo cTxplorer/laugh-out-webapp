@@ -3,17 +3,20 @@ $(function () {
     // keystroke effect
     document.onkeyup = function (e) {
         var check = document.getElementById("next").disabled;
-        if (e.keyCode == 13 && check != true)
-            $('#next').click(); // enter key
+        if (e.keyCode == 13 && $('#edit').hasClass("secondClick") == true)
+            $('#edit').click(); // enter key
 
-        else if (e.keyCode == 32 && check != true)
-            $('#next').click(); // space key
+        else if (e.keyCode == 27 && $('#edit').hasClass("secondClick") == true)
+            $('#edit').click(); // escape key
 
         else if (e.keyCode == 27 && $('#edit').hasClass("firstClick") == true)
             $('#edit').click(); // escape key
 
-        else if (e.keyCode == 27 && $('#edit').hasClass("secondClick") == true)
-            $('#edit').click(); // escape key
+        else if (e.keyCode == 13 && check != true)
+            $('#next').click(); // enter key
+
+        else if (e.keyCode == 32 && check != true)
+            $('#next').click(); // space key
     };
 
 
@@ -55,7 +58,7 @@ $(function () {
         var cnt = 0;
         var prefix = "Loading";
         intrvl = setInterval(function () {
-            i = (++i)%4;
+            i = (++i) % 4;
             if (i == 4) {
                 i = 0;
                 ++cnt;
@@ -140,5 +143,4 @@ $(function () {
             alert("Try sharing from mobile device!");
         }
     });
-
 });
