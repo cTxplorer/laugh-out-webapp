@@ -1,64 +1,23 @@
-# hello-nginx
+# Laught out w/ Chuck Norris
 
-This quickstart consists of a basic hasura project with a microservice which hosts a static html page using nginx. The static page will be hosted at https://www.cluster-name.hasura-app.io.
+An entertaining webapp which feeds it's user with humorous jokes revolving around the legacy of Chuck Norris.
 
-This is the right place to start if you want to deploy a website or a static page on Hasura using nginx.
+### Website
+Head to the [webapp](https://www.bacillus38.hasura-app.io/) deployed on Hasura, and have fun!
 
-## Introduction
+### Features
+* **Customize**: Webapp also allows you to star in the jokes yourself (or your friend :D ) by changing the name of the main character.
 
-This quickstart project comes with the following by default:
-1. A basic hasura project
-2. Two tables `article` and `author` with some dummy data
-3. A basic nginx microservice running on the `www` subdomain.
+* **Share**: Webapp allows you to share WhatsApp a joke with a single click.
 
-## Quickstart
+* **Keyboard controls**: Desktop users can navigate through the webapp with SPACE, ESC, TAB & ENTER keys alone.
 
-Follow this section to get this project working. Before you begin, ensure you have the latest version of hasura cli tool installed.
+### API used
+The joke API was provided by [icndb.com](http://www.icndb.com/).
 
-### Step 1: Getting the project
+### Acknowledgments
 
-```sh
-$ hasura quickstart hello-nginx
-$ cd hello-nginx
-```
+* Team at [Hasura](https://www.hasura.io)
+* Developer of [ICNDB API](http://www.icndb.com/api/)
 
-### Step 2: Adding your static files
-
-Copy your static files to `microservices/www/app/src/` with the entrypoint being `index.html`.
-
-### Step 3: Deploying on a hasura cluster
-
-```sh
-$ git add .
-$ git commit -m "Initial Commit"
-$ git push hasura master
-```
-
-Once the above commands are executed successfully, head over to `https://www.<cluster-name>.hasura-app.io` (in this case `https://www.h34-excise98-stg.hasura-app.io`) to view your app.
-
-## Project structure
-
-### Files and Directories
-
-The project (a.k.a. project directory) has a particular directory structure and it has to be maintained strictly, else `hasura` cli would not work as expected. A representative project is shown below:
-
-```
-.
-├── hasura.yaml
-├── clusters.yaml
-├── conf
-│   ├── authorized-keys.yaml
-│   ├── auth.yaml
-│   ├── ci.yaml
-│   ├── domains.yaml
-│   ├── filestore.yaml
-│   ├── gateway.yaml
-│   ├── http-directives.conf
-│   ├── notify.yaml
-│   ├── postgres.yaml
-│   ├── routes.yaml
-│   └── session-store.yaml
-├── migrations/
-└── services
-    ├── www/
-```
+ **_Silly, yet funny. Isn't it?_**
