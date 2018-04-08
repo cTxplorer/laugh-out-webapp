@@ -3,19 +3,19 @@ $(function () {
     // keystroke effect
     document.onkeyup = function (e) {
         var check = document.getElementById("next").disabled;
-        if (e.keyCode == 13 && $('#edit').hasClass("secondClick") == true)
+        if (e.keyCode == 13 && $('#edit').hasClass("secondClick") === true)
             $('#edit').click(); // enter key
 
-        else if (e.keyCode == 27 && $('#edit').hasClass("secondClick") == true)
+        else if (e.keyCode == 27 && $('#edit').hasClass("secondClick") === true)
             $('#edit').click(); // escape key
 
-        else if (e.keyCode == 27 && $('#edit').hasClass("firstClick") == true)
+        else if (e.keyCode == 27 && $('#edit').hasClass("firstClick") === true)
             $('#edit').click(); // escape key
 
-        else if (e.keyCode == 13 && check != true)
+        else if (e.keyCode == 13 && check != true && $('#edit').hasClass("secondClick") !== true)
             $('#next').click(); // enter key
 
-        else if (e.keyCode == 32 && check != true)
+        else if (e.keyCode == 32 && check != true && $('#edit').hasClass("secondClick") !== true)
             $('#next').click(); // space key
     };
 
@@ -31,21 +31,19 @@ $(function () {
                 $(this).addClass("secondClick");
                 $(this).removeClass("firstClick");
             } else {
-                if (document.getElementById("firstName").value.trim() == "") {
-                    alert('Insert First Name');
-                    return;
-                } else if (document.getElementById("lastName").value.trim() == "") {
-                    alert('Insert Last Name');
-                    return;
-                } else {
-                    $(".editPanel").hide();
-                    $(".jokePanel").show();
-                    $('#next').show();
-                    $(this).val("Customize"); //    ("edit");
-                    $(this).addClass("firstClick");
-                    $(this).removeClass("secondClick");
+                if (document.getElementById("firstName").value.trim() == "")
+                    document.getElementById("firstName").value = "Chuck";
+                if (document.getElementById("lastName").value.trim() == "")
+                    document.getElementById("lastName").value = "Norris";
+                $(".editPanel").hide();
+                $(".jokePanel").show();
+                $('#next').show();
+                $(this).val("Customize"); //    ("edit");
+                $(this).addClass("firstClick");
+                $(this).removeClass("secondClick");
+                if (document.getElementById("next").disabled !== true)
                     $('#next').click();
-                }
+                $('#joke').focus();
             }
         });
 
@@ -105,8 +103,8 @@ $(function () {
             .catch(function (err) {
                 console.log('Fetch Error :', err);
             });
+        $('#joke').focus();
     });
-
 
     // Whatsapp Share Feature
     var isMobile = {
@@ -136,8 +134,6 @@ $(function () {
             var url = $(this).attr("data-link");
             var message = encodeURIComponent(text) + "%0A%0A------------%0ACheck%20more%20jokes%20and%20troll%20your%20friends%20at%20" + encodeURIComponent(url);
             var whatsapp_url = "whatsapp://send?text=" + message;
-            console.log(message);
-            console.log(whatsapp_url);
             window.location.href = whatsapp_url;
         } else {
             alert("Try sharing from mobile device!");

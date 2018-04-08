@@ -3,7 +3,7 @@
 
 body {
     background-color: #FFC914;
-/*    background-color: #fedf85;*/
+    cursor: default;
 }
 
 
@@ -14,7 +14,7 @@ h1 {
     font: small-caps 800 1.5em/1.75 'Nunito', sans-serif;
     text-align: center;
     color: #E4572E;
-/*    color: #8a6435;*/
+    text-shadow: 1px 1px 0 gray;
 }
 
 /* Main
@@ -55,12 +55,20 @@ h1 {
 /* Inputs
 --------------------------------------------- */
 
+input {
+    border: hidden;
+    -webkit-box-shadow: 10px 10px 21px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 10px 10px 21px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 10px 10px 21px 0px rgba(0, 0, 0, 0.1);
+}
+
 input[type="button"] {
     font: 400 1.2em 'Nunito', sans-serif;
     display: inline-block;
     margin: 0 auto;
     width: 35%;
     text-align: center;
+    cursor: pointer;
 }
 
 input[type="text"] {
@@ -101,6 +109,10 @@ footer {
     color: #1F271B;
 }
 
+a {
+    text-decoration: none;
+}
+
 .red {
     color: #FF2E29;
 }
@@ -120,6 +132,7 @@ footer {
 
 /* Whatsapp
 ---------------------------------------------- */
+
 .w3_whatsapp_btn {
     background-image: url('../images/icon.png');
     border: 1px solid rgba(0, 0, 0, 0.1);

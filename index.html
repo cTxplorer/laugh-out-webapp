@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#FFC914">
+	
     <meta property="og:site_name" content="Laugh Out w/ Chuck Norris">
     <meta property="og:title" content="Laugh Out w/ Chuck Norris" />
     <meta property="og:description" content="An entertaining webapp which feeds it's user with humorous jokes revolving around the legacy of Chuck Norris." />
@@ -21,25 +21,30 @@
 </head>
 
 <body>
-    <header role="banner">
+    <header>
         <h1>😆😆 Laugh Out w/ Chuck&nbsp;Norris 😆😆</h1>
     </header>
 
-    <main role="main">
+    <main>
         <div class="container">
 
             <div class="jokePanel center">
-                <span id="joke">Shortcuts for PC<br><kbd>SPACE</kbd> / <kbd>ENTER</kbd> &mdash; fetch a joke,<br><kbd>ESC</kbd> &mdash; customize,<br><kbd>ESC</kbd> &amp; <kbd>ENTER</kbd> &mdash; save setting<br></span>
+                <span id="joke">
+                    Shortcuts for PC<br>
+                    <kbd>SPACE</kbd> / <kbd>ENTER</kbd> &mdash; fetch a joke,<br>
+                    <kbd>ESC</kbd> &mdash; customize,<br>
+                    <kbd>ESC</kbd> &amp; <kbd>ENTER</kbd> &mdash; save setting<br>
+                </span>
             </div>
 
             <div class="editPanel center">
-                <h4>Got a friend like Chuck?</h4>
+                <h4>Troll your friend!</h4>
 
                 <label for="firstName">Your friend's name</label><br>
                 <input type="text" id="firstName" value="Chuck">
-                <input type="text" id="lastName" value="Norris">
-
-                <br><label for="yes">Receive explicit jokes?</label><br>
+                <input type="text" id="lastName" value="Norris"><br>
+                
+                <label for="yes">Receive explicit jokes?</label><br>
                 <input type="checkbox" id="yes">
             </div>
 
@@ -51,12 +56,10 @@
         </div>
     </main>
 
-    <footer role="contentinfo">
+    <footer>
         <p id="love">
             <a data-text="" data-link="https://www.bacillus38.hasura-app.io/" class="whatsapp w3_whatsapp_btn w3_whatsapp_btn_large" id="share" style="margin-bottom: 1em; border-radius: 7px;">Share</a><br> Made with <img src="images/like.png" style="width: 16"> at <i>Hasura Hackathon</i><br><br>
-
             <a href="mailto:pratik.gadhiya@hotmail.com?subject=Laugh%20out%3A%20Feedback/Bug" id="mail">Report bug / Send Feedback</a>
-
             <a href="https://www.linkedin.com/in/pratikGadhiya" id="linkedin">Connect with me on <img src="images/linkedin-logo.png" title="linkedin logo"></a>
         </p>
     </footer>
@@ -72,9 +75,6 @@
                 $(this).val('');
             });
         });
-
     </script>
-
 </body>
-
 </html>
