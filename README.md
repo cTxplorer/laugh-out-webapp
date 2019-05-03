@@ -3,7 +3,7 @@
 An entertaining webapp which feeds its user with humorous jokes revolving around the legacy of Chuck Norris.
 
 ### Website
-Head to the [webapp](https://www.bacillus38.hasura-app.io/) deployed on Hasura, and have fun!
+Head to the [webapp](https://ctxplorer.github.io/laugh-out-webapp/) deployed on Hasura, and have fun!
 
 ### Features
 * **Customize**: Webapp also allows you to star in the jokes yourself (or your friend :D ) by changing the name of the main character.
