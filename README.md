@@ -3,7 +3,9 @@
 An entertaining webapp which feeds its user with humorous jokes revolving around the legacy of Chuck Norris.
 
 ### Website
-Head to the [webapp](https://ctxplorer.github.io/laugh-out-webapp/) deployed on Hasura, and have fun!
+*This website was built using basic HTML, CSS & JS (no rocket-science :D)*
+
+Checkout the [webapp deployed on Github Pages](https://ctxplorer.github.io/laugh-out-webapp/), and have fun!
 
 ### Features
 * **Customize**: Webapp also allows you to star in the jokes yourself (or your friend :D ) by changing the name of the main character.
